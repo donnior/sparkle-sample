@@ -17,9 +17,9 @@ import me.donnior.sparkle.annotation.Param;
 import me.donnior.sparkle.annotation.ResponseBody;
 import me.donnior.sparkle.http.HTTPStatusCode;
 import me.donnior.sparkle.view.result.HttpStatus;
-import me.donnior.srape.AbstractFieldExposerModule;
-import me.donnior.srape.FieldExposerModule;
 
+import org.agilej.jsonty.JSONModel;
+import org.agilej.jsonty.support.AbstractJSONMoel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -73,9 +73,9 @@ public class ProjectController {
 //    }
 //  
     
-    public FieldExposerModule jsons(){
+    public JSONModel jsons(){
         this.service.hello();
-        return new AbstractFieldExposerModule() {
+        return new AbstractJSONMoel() {
             public void config() {
                 expose(new int[]{1,2,3}).withName("ints");        //ints
                 expose(new String[]{"one","two","three2"}).withName("strings");        //strings
