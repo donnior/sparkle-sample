@@ -3,7 +3,6 @@ package me.donnior.sparkle.demo;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
 
 import me.donnior.eset.EntityUpdater;
 import me.donnior.sparkle.annotation.Controller;
@@ -31,7 +30,7 @@ public class UserController {
         return "user/index";
     }
     
-    public String save(HttpServletRequest request) {
+    public String save() {
         User user = new User();
 //        new EntityUpdater().updateAttribute(user, (Map<String, Object>)request.getParameterMap());
         this.service.saveUser(user);

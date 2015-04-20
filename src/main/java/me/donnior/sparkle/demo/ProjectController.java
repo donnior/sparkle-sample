@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import me.donnior.fava.util.FLists;
 import me.donnior.sparkle.Params;
 import me.donnior.sparkle.annotation.Async;
@@ -84,7 +81,7 @@ public class ProjectController {
     }
     
     @Json
-    public List<String> json(HttpServletRequest request){
+    public List<String> json(){
         return FLists.create("one", "two", "three", "four");
     }
     
@@ -140,16 +137,7 @@ public class ProjectController {
     public Object async4(){
         return "normal";
     }
-    
-    public void text(HttpServletResponse response){
-        try {
-//            logger.info("get text");
-            response.getWriter().write("hello world");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
+
     public static void main(String[] args){
         logger.info("should be printed");
         System.out.println("ha");
