@@ -3,3 +3,14 @@ target
 .gradle
 .project
 .classpath
+sparkle-sample.iml
+
+sparkle-sample.ipr
+
+sparkle-sample.iws
+
+async.log
+
+.project
+
+.classpath
