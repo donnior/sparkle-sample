@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+mvn -o clean compile exec:java -Dexec.mainClass="me.donnior.sparkle.netty4.HttpServer" -f pom_for_netty.xml

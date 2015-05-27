@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+mvn jetty:run -f pom_for_jetty.xml
