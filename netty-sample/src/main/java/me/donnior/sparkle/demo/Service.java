@@ -11,7 +11,7 @@ public class Service {
     private List<User> users = new ArrayList<User>();
     
     public void hello(){
-        System.out.println("hello");
+        // System.out.println("hello");
     }
     
     public int saveUser(User user) {

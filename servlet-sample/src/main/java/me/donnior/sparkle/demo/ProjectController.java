@@ -18,6 +18,7 @@ import me.donnior.sparkle.annotation.ResponseBody;
 import me.donnior.sparkle.http.HTTPStatusCode;
 import me.donnior.sparkle.view.result.HttpStatus;
 
+import org.agilej.jsonty.JSONBuilder;
 import org.agilej.jsonty.JSONModel;
 import org.agilej.jsonty.support.AbstractJSONMoel;
 import org.slf4j.Logger;
@@ -145,6 +146,20 @@ public class ProjectController {
         try {
 //            logger.info("get text");
             response.getWriter().write("hello world");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void streamJson(HttpServletResponse response){
+        JSONModel model =  new AbstractJSONMoel() {
+            public void config() {
+                expose(new int[]{1,2,3}).withName("ints");        //ints
+                expose(new String[]{"one","two","three2"}).withName("strings");        //strings
+            }
+        };
+        try {
+            new JSONBuilder(model).build(response.getWriter());
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -6,6 +6,8 @@ import java.util.concurrent.Callable;
 
 import me.donnior.fava.util.FLists;
 import me.donnior.sparkle.Params;
+import me.donnior.sparkle.WebRequest;
+import me.donnior.sparkle.WebResponse;
 import me.donnior.sparkle.annotation.Async;
 import me.donnior.sparkle.annotation.Controller;
 import me.donnior.sparkle.annotation.Json;
@@ -15,6 +17,7 @@ import me.donnior.sparkle.annotation.ResponseBody;
 import me.donnior.sparkle.http.HTTPStatusCode;
 import me.donnior.sparkle.view.result.HttpStatus;
 
+import org.agilej.jsonty.JSONBuilder;
 import org.agilej.jsonty.JSONModel;
 import org.agilej.jsonty.support.AbstractJSONMoel;
 import org.slf4j.Logger;
@@ -137,6 +140,17 @@ public class ProjectController {
     public Object async4(){
         return "normal";
     }
+
+    public JSONModel streamJson(WebRequest request){
+        JSONModel model =  new AbstractJSONMoel() {
+            public void config() {
+                expose(new int[]{1,2,3}).withName("ints");        //ints
+                expose(new String[]{"one","two","three2"}).withName("strings");        //strings
+            }
+        };
+
+        return model;
+    }    
 
     public static void main(String[] args){
         logger.info("should be printed");

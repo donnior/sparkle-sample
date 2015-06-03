@@ -32,6 +32,7 @@ public class DemoRouteModuleOne implements RouteModule {
         router.match("/project/async4").to("projects#async4");
         
         router.match("/project/text").to("projects#text");
+        router.match("/project/streamJson").to("projects#streamJson");
     
     }
 
