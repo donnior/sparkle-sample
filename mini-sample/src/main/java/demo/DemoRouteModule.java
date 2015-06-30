@@ -3,7 +3,7 @@ package demo;
 import me.donnior.sparkle.route.RouteModule;
 import me.donnior.sparkle.route.Router;
 
-public class DemoRouteModuleOne implements RouteModule {
+public class DemoRouteModule implements RouteModule {
     
 
     @Override
