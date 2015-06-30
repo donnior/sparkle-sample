@@ -33,6 +33,11 @@ public class DemoRouteModuleOne implements RouteModule {
         
         router.match("/project/text").to("projects#text");
         router.match("/project/streamJson").to("projects#streamJson");
+
+        //for test
+        router.match("/func").to(request -> {
+            return e -> e.expose(2).withName("rr");
+        });
     
     }
 

@@ -1,0 +1,34 @@
+apply plugin: "java"
+apply plugin: "war"
+apply plugin: "jetty"
+apply plugin: "eclipse"
+apply plugin: "idea"
+ 
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+ 
+dependencies {
+	compile "com.sparkle:sparkle-core:1.0-SNAPSHOT"
+    //compile "org.apache.logging.log4j:log4j-slf4j-impl:2.0-beta9"
+    //compile "org.apache.logging.log4j:log4j-core:2.0-beta9"
+    compile "ch.qos.logback:logback-classic:1.1.3"
+}
+
+configurations{
+    sparkleNetty
+}
+
+dependencies {
+    sparkleNetty 'com.sparkle:sparkle-netty:1.0-SNAPSHOT'
+}
+
+task runWithNetty(type: JavaExec, dependsOn: 'classes'){
+    classpath = sourceSets.main.runtimeClasspath.plus configurations.sparkleNetty
+    main = "me.donnior.sparkle.netty4.HttpServer"
+}
