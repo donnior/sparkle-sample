@@ -28,7 +28,8 @@ configurations.all {
 
 dependencies {
     testCompile 'junit:junit:4.8.1'
- 
+
+    compile 'org.agilej:fava:0.1'
     compile 'com.sparkle:sparkle-servlet:1.0-SNAPSHOT'
     compile 'com.google.code.gson:gson:2.2.3'
 

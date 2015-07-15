@@ -33,7 +33,10 @@ public class DemoRouteModuleOne implements RouteModule {
         
         router.match("/project/text").to("projects#text");
         router.match("/project/streamJson").to("projects#streamJson");
-    
+
+        router.match("/cookies/add").to("cookies#add");
+        router.match("/cookies/remove").to("cookies#remove");
+
     }
 
 }

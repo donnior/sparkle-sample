@@ -7,7 +7,6 @@ import java.util.concurrent.Callable;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import me.donnior.fava.util.FLists;
 import me.donnior.sparkle.Params;
 import me.donnior.sparkle.annotation.Async;
 import me.donnior.sparkle.annotation.Controller;
@@ -18,6 +17,7 @@ import me.donnior.sparkle.annotation.ResponseBody;
 import me.donnior.sparkle.http.HTTPStatusCode;
 import me.donnior.sparkle.view.result.HttpStatus;
 
+import org.agilej.fava.util.FLists;
 import org.agilej.jsonty.JSONBuilder;
 import org.agilej.jsonty.JSONModel;
 import org.agilej.jsonty.support.AbstractJSONMoel;
@@ -164,9 +164,5 @@ public class ProjectController {
             e.printStackTrace();
         }
     }
-    
-    public static void main(String[] args){
-        logger.info("should be printed");
-        System.out.println("ha");
-    }
+
 }
