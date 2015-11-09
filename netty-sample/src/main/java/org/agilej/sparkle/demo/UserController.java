@@ -1,12 +1,12 @@
-package me.donnior.sparkle.demo;
+package org.agilej.sparkle.demo;
 
 import java.util.List;
 import java.util.Map;
 
 
-import me.donnior.eset.EntityUpdater;
-import me.donnior.sparkle.annotation.Controller;
-import me.donnior.sparkle.annotation.Out;
+import org.agilej.eset.EntityUpdater;
+import org.agilej.sparkle.annotation.Controller;
+import org.agilej.sparkle.annotation.Out;
 
 import com.google.inject.Inject;
 

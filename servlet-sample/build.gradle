@@ -30,7 +30,7 @@ dependencies {
     testCompile 'junit:junit:4.8.1'
 
     compile 'org.agilej:fava:0.1'
-    compile 'com.sparkle:sparkle-servlet:1.0-SNAPSHOT'
+    compile 'org.agilej:sparkle-servlet:1.0-SNAPSHOT'
     compile 'com.google.code.gson:gson:2.2.3'
 
     compile 'org.slf4j:slf4j-api:1.6.4'

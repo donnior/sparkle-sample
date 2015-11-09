@@ -1,7 +1,7 @@
-package me.donnior.sparkle.demo.module;
+package org.agilej.sparkle.demo.module;
 
-import me.donnior.sparkle.route.RouteModule;
-import me.donnior.sparkle.route.Router;
+import org.agilej.sparkle.route.RouteModule;
+import org.agilej.sparkle.route.Router;
 
 public class DemoRouteModuleOne implements RouteModule {
     
@@ -36,6 +36,8 @@ public class DemoRouteModuleOne implements RouteModule {
 
         router.match("/cookies/add").to("cookies#add");
         router.match("/cookies/remove").to("cookies#remove");
+
+        router.match("/session/add").to("cookies#addSession");
 
     }
 

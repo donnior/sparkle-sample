@@ -1,4 +1,4 @@
-package me.donnior.sparkle.demo;
+package org.agilej.sparkle.demo;
 
 import java.util.List;
 import java.util.ArrayList;

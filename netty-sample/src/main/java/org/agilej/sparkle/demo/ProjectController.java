@@ -1,21 +1,21 @@
-package me.donnior.sparkle.demo;
+package org.agilej.sparkle.demo;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import me.donnior.fava.util.FLists;
-import me.donnior.sparkle.Params;
-import me.donnior.sparkle.WebRequest;
-import me.donnior.sparkle.WebResponse;
-import me.donnior.sparkle.annotation.Async;
-import me.donnior.sparkle.annotation.Controller;
-import me.donnior.sparkle.annotation.Json;
-import me.donnior.sparkle.annotation.Out;
-import me.donnior.sparkle.annotation.Param;
-import me.donnior.sparkle.annotation.ResponseBody;
-import me.donnior.sparkle.http.HTTPStatusCode;
-import me.donnior.sparkle.view.result.HttpStatus;
+import org.agilej.fava.util.FLists;
+import org.agilej.sparkle.Params;
+import org.agilej.sparkle.WebRequest;
+import org.agilej.sparkle.WebResponse;
+import org.agilej.sparkle.annotation.Async;
+import org.agilej.sparkle.annotation.Controller;
+import org.agilej.sparkle.annotation.Json;
+import org.agilej.sparkle.annotation.Out;
+import org.agilej.sparkle.annotation.Param;
+import org.agilej.sparkle.annotation.ResponseBody;
+import org.agilej.sparkle.http.HTTPStatusCode;
+import org.agilej.sparkle.view.result.HttpStatus;
 
 import org.agilej.jsonty.JSONBuilder;
 import org.agilej.jsonty.JSONModel;

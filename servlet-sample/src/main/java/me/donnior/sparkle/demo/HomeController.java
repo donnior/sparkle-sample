@@ -1,6 +1,6 @@
-package me.donnior.sparkle.demo;
+package org.agilej.sparkle.demo;
 
-import me.donnior.sparkle.annotation.Controller;
+import org.agilej.sparkle.annotation.Controller;
 
 @Controller("home")
 public class HomeController {

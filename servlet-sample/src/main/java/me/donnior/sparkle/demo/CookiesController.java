@@ -1,12 +1,13 @@
-package me.donnior.sparkle.demo;
+package org.agilej.sparkle.demo;
 
 import com.google.inject.Inject;
-import me.donnior.sparkle.Cookie;
-import me.donnior.sparkle.Cookies;
-import me.donnior.sparkle.Params;
-import me.donnior.sparkle.annotation.*;
-import me.donnior.sparkle.http.HTTPStatusCode;
-import me.donnior.sparkle.view.result.HttpStatus;
+import org.agilej.sparkle.WebRequest;
+import org.agilej.sparkle.Cookie;
+import org.agilej.sparkle.Cookies;
+import org.agilej.sparkle.Params;
+import org.agilej.sparkle.annotation.*;
+import org.agilej.sparkle.http.HTTPStatusCode;
+import org.agilej.sparkle.view.result.HttpStatus;
 import org.agilej.fava.util.FLists;
 import org.agilej.jsonty.JSONBuilder;
 import org.agilej.jsonty.JSONModel;
@@ -37,6 +38,11 @@ public class CookiesController {
     
     public String add(Cookies cookies){
         cookies.addCookie(new Cookie("sample_cookie").value(String.valueOf(System.currentTimeMillis())).maxAge(300000));
+        return "projects/show";
+    }
+
+    public String addSession(WebRequest request){
+        request.setSession("uid", "donny.xie");
         return "projects/show";
     }
 

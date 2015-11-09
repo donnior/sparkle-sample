@@ -1,7 +1,7 @@
 package demo;
 
-import me.donnior.sparkle.route.RouteModule;
-import me.donnior.sparkle.route.Router;
+import org.agilej.sparkle.route.RouteModule;
+import org.agilej.sparkle.route.Router;
 
 public class DemoRouteModule implements RouteModule {
     
@@ -16,6 +16,8 @@ public class DemoRouteModule implements RouteModule {
                 e.expose(request.pathVariable("id")).withName("id");
             };
         });
+
+        router.match("/api/{path}").to("api#get");
     
     }
 

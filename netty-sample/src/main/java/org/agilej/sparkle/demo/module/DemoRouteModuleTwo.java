@@ -1,6 +1,6 @@
-package me.donnior.sparkle.demo.module;
+package org.agilej.sparkle.demo.module;
 
-import me.donnior.sparkle.route.AbstractRouteModule;
+import org.agilej.sparkle.route.AbstractRouteModule;
 
 public class DemoRouteModuleTwo extends  AbstractRouteModule {
 

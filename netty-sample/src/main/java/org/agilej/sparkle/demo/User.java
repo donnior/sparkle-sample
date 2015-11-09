@@ -1,6 +1,6 @@
-package me.donnior.sparkle.demo;
+package org.agilej.sparkle.demo;
 
-import me.donnior.eset.Accessible;
+import org.agilej.eset.Accessible;
 
 
 public class User {
