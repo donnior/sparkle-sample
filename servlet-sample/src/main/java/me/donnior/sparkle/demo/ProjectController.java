@@ -110,7 +110,9 @@ public class ProjectController {
             
             @Override
             public String call() throws Exception {
-                return "callable";
+                System.out.println("execute callable code");
+                throw new RuntimeException("test async exception");
+                // return "callable";
             }
         };
     }

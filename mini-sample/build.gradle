@@ -1,0 +1,38 @@
+group = 'org.agilej'
+version = '1.0-SNAPSHOT'
+
+repositories {  
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply from: 'gretty.plugin'
+
+// apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile 'junit:junit:4.0'
+
+    compile 'org.agilej:sparkle-servlet:1.0-SNAPSHOT'
+ 
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2'
+}
+
+compileJava {
+    options.incremental = true
+}
+
+gretty {
+  contextPath = '/'
+}
